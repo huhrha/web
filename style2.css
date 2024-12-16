@@ -1,0 +1,134 @@
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .page {background: url('solar2.jpg') no-repeat center center/cover; /* 우주 배경 */
+    height: 100vh; /* 화면 전체 높이 */
+    color: white; /* 기본 텍스트 색상 */
+    position: relative; /* 자식 요소 배치를 위한 relative 설정 */
+  }
+
+  /* 이미지 */
+  .image {
+    position: absolute; /* 절대 위치 설정 */
+    top: -30%; /* 상단에서 30% */
+    left: -15%; /* 왼쪽에서 15% */
+    width: 47vw; /* 화면 너비 비율로 설정 */
+    height: auto; /* 비율 유지 */
+    z-index: 1; /* 콘텐츠 위에 표시 */
+  }
+
+  .Saturn-image {
+    position: absolute; /* 절대 위치 설정 */
+    top: -25%; /* 상단에서 30% */
+    left: -5%; /* 왼쪽에서 15% */
+    width: 47vw; /* 화면 너비 비율로 설정 */
+    height: auto; /* 비율 유지 */
+    z-index: 1; /* 콘텐츠 위에 표시 */
+  }
+
+  
+  /* 불투명 박스 */
+  .content-box {
+    background: rgba(63, 63, 63, 0.6); /* 반투명 배경 */
+    backdrop-filter: blur(5px);
+    padding: 5vw; /* 화면 너비 기반 패딩 */
+    border-radius: 15px;
+    text-align: right;
+    position: absolute; /* 절대 위치 */
+    width: 90%; /* 너비를 75%로 줄임 */
+    height: 80%; /* 높이 유지 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 완전 중앙 정렬 */
+    box-shadow: 0 0 2vw 1vw rgba(48, 47, 47, 0.4),
+                0 0 4vw 1vw rgba(179, 224, 242, 0.3),
+                0 0 6vw 4vw rgba(255, 255, 255, 0.083);
+    text-align: center; /* 텍스트 중앙 정렬 */
+    color: rgb(255, 255, 255); /* 텍스트 색상 */
+  }
+  
+  .content-box h1 {
+    font-size: 5vw; /* 화면 크기에 따라 글자 크기 조정 */
+    font-family: "Playfair Display SC", serif;
+    font-weight: 900;
+    font-style: normal;
+    margin-top: -3vw; /* 위쪽 간격 */
+    margin-left: 15vw; /* 왼쪽 간격 */
+    color: #fff; /* 텍스트 색상 */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* 빛나는 효과 */
+  }
+  
+  .content-box p {
+    font-size: 1.3rem; /* 글자 크기 */
+    font-family: "Gowun Batang", serif;
+    line-height: 1.8; /* 줄 간격 */
+    color: #ccc; /* 텍스트 색상 */
+    margin-top: 2vw; /* 위쪽 간격 */
+    margin-left: 15vw; /* 왼쪽 간격 */
+}
+
+
+/* 태양계 외부 */
+
+.alpha-page {
+    background: url('alpha.jpg') no-repeat center center/cover; /* 우주 배경 */
+    height: 100vh; /* 화면 전체 높이 */
+    color: white; /* 기본 텍스트 색상 */
+    position: relative; /* 자식 요소 배치를 위한 relative 설정 */
+  }
+
+  .andro-page {
+    background: url('andro2.jpg') no-repeat center center/cover; /* 우주 배경 */
+    height: 100vh; /* 화면 전체 높이 */
+    color: white; /* 기본 텍스트 색상 */
+    position: relative; /* 자식 요소 배치를 위한 relative 설정 */
+  }
+
+  .black-page {
+    background: url('blackhole.png') no-repeat center center/cover; /* 우주 배경 */
+    height: 100vh; /* 화면 전체 높이 */
+    color: white; /* 기본 텍스트 색상 */
+    position: relative; /* 자식 요소 배치를 위한 relative 설정 */
+  }
+
+  .beyond-box {
+    background: rgba(45, 48, 48, 0.8); /* 반투명 배경 */
+    backdrop-filter: blur(5px);
+    padding: 5vw; /* 화면 너비 기반 패딩 */
+    border-radius: 15px;
+    text-align: right;
+    position: absolute; /* 절대 위치 */
+    width: 80%; /* 너비를 75%로 줄임 */
+    height: 80%; /* 높이 유지 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 완전 중앙 정렬 */
+    box-shadow: 0 0 2vw 1vw rgba(48, 47, 47, 0.4),
+                0 0 4vw 1vw rgba(179, 224, 242, 0.3),
+                0 0 6vw 4vw rgba(255, 255, 255, 0.083);
+    text-align: center; /* 텍스트 중앙 정렬 */
+    color: rgb(255, 255, 255); /* 텍스트 색상 */
+  }
+
+  .beyond-box h1 {
+    font-size: 5vw; /* 화면 크기에 따라 글자 크기 조정 */
+    font-family: "Playfair Display SC", serif;
+    font-weight: 900;
+    font-style: normal;
+    margin-top: -3vw; /* 위쪽 간격 */
+    color: #fff; /* 텍스트 색상 */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* 빛나는 효과 */
+  }
+
+  .beyond-box p {
+    font-size: 1.1rem; /* 글자 크기 */
+    font-family: "Gowun Batang", serif;
+    line-height: 1.8; /* 줄 간격 */
+    color: #ffffff; /* 텍스트 색상 */
+    margin-top: 2vw; /* 위쪽 간격 */
+}

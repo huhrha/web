@@ -1,0 +1,430 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Arial', sans-serif; /* 기본 폰트 */
+}
+
+.section1 {
+  background: url('space2.jpg') no-repeat center center/cover;
+  height: 100vh;
+  z-index: -1;
+}
+
+.content1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.content1 h1 {
+  font-size: 6.5vw;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #c5ebfa, #6D8AF5); /* 그라데이션 색상 */
+  -webkit-background-clip: text; /* 배경 클립을 텍스트로 설정 */
+  -webkit-text-fill-color: transparent; /* 텍스트 색상을 투명으로 설정 */
+  font-family: "Playfair Display SC", serif;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  transform: translateY(0); /* 불필요한 수직 이동 제거 */
+  margin: 0 auto;
+
+}
+
+.content1 p {
+  font-size: 1.7vw;
+  color: rgba(255, 255, 255, 0.638);
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-style: italic;
+  margin-top: 0px; /* 제목과 서브타이틀 간 간격 조정 */
+  text-shadow: 0 0 10px;
+}
+
+/* 메인 페이지 하단 링크 스타일 */
+.main-links {
+  display: flex; /* 가로 정렬 */
+  justify-content: center; /* 중앙 정렬 */
+  gap: 22vw; /* 링크 간격 */
+  position: absolute; /* 절대 위치 설정 */
+  bottom: 13%; /* 화면 하단에서 위로 50px */
+  width: 100%; /* 화면 전체 폭 사용 */
+}
+
+.link-item {
+  font-family: "Diphylleia", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4vw;
+  color: #ffffff; /* 텍스트 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  position: relative; /* 밑줄 추가를 위한 설정 */
+  transition: color 0.3s ease; /* 색상 변경 효과 */
+}
+
+.link-item::after {
+  content: ""; /* 밑줄 요소 */
+  display: block;
+  width: 100%; /* 기본 밑줄 길이 */
+  height: 1.4px; /* 밑줄 두께 */
+  background-color: #ffffff; /* 밑줄 색상 */
+  margin: 5px auto 0; /* 텍스트 아래에 위치 */
+  transition: transform 0.3s ease, width 0.3s ease; /* 밑줄 확장 효과 */
+}
+
+.link-item:hover {
+  color: #B3E0F2; /* 호버 시 글자 색상 */
+}
+
+.link-item:hover::after {
+  transform: scaleX(1.5); /* 대칭적으로 줄을 늘림 */
+  background-color: #B3E0F2; /* 호버 시 밑줄 색상 변경 */
+}
+
+.navbar {
+  font-family: "Julius Sans One", sans-serif;
+  position: fixed; /* 상단 고정 */
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #000000;
+  backdrop-filter: blur(5px); /* 배경 블러 효과 */
+}
+
+
+.navbar-dark .navbar-brand {
+  font-family: "Playfair Display SC", serif; 
+  text-shadow: 0 0 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar-dark .nav-link {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .nav-link:hover {
+  color: #6D8AF5; /* 호버 시 강조 색상 */
+}
+
+.section {
+  height: 100vh; /* 각 섹션이 화면 크기만큼 차지 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8); /* 기본 배경색 */
+  color: white;
+}
+
+
+/* 두 번째 섹션 스타일 */
+
+.content2 h1 {
+  font-size: 5vw;
+  font-family: "Playfair Display SC", serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #ffffff;
+  text-shadow: 0 0 10px;
+  margin-bottom: 100px;
+}
+
+
+/* 태양계 섹션 */
+.section-solar {
+  width: 100%; /* 화면 전체 너비 */
+  height: 100vh; /* 화면 높이 */
+  background: url('solar2.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 60px 0;
+}
+
+
+/* 행성 컨테이너 */
+.planet-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개 */
+  gap: 70px 50px; /* 세로, 가로 간격 */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+/* 개별 행성 스타일 */
+.planet {
+  text-align: center;
+}
+
+.planet img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 2s ease;
+}
+
+.planet img:hover {
+  transform: scale(1.1) rotate(100deg);;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.9),
+              0 0 30px rgba(80, 80, 80, 0.6),
+              0 0 80px rgba(255, 255, 255, 0.738);
+}
+
+.planet p {
+  font-family: "Julius Sans One", serif;
+  margin-top: 10px;
+  font-size: 1vw;
+  color: #B3E0F2;
+  text-shadow: 0 0 10px;
+}
+
+.planet a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+
+/* 세 번째 섹션 스타일 */
+.section3 {
+  background: url('bg3.jpg') no-repeat center center/cover;
+  height: 100vh;
+  z-index: -1;
+}
+
+.content3 h1 {
+  font-size: 5vw;
+  font-family: "Playfair Display SC", serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #ffffff;
+  text-shadow: 0 0 10px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px; /* 카드 간 간격 증가 */
+  padding: 100px 50px;
+}
+
+.explore-card {
+  background: rgba(0, 0, 0, 0.8); /* 카드 배경 어둡게 조정 */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 30px;
+  border-radius: 15px; /* 둥근 모서리 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-card:hover {
+  transform: scale(1.08); /* 확대 효과 */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+.explore-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* 이미지에 테두리 추가 */
+}
+
+.explore-card h3 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  color: #B3E0F2; /* 밝은 하늘색 */
+  text-shadow: 0 0 10px rgba(179, 224, 242, 0.6);
+  margin: 15px 0;
+}
+
+.explore-card p {
+  font-family: "Diphylleia", serif;
+  font-size: 1rem;
+  color: #ffffff; /* 밝은 회색 */
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.explore-card a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+/* 네 번째 섹션 스타일 */
+.journal-section {
+  background: url('bg1.jpg') no-repeat center center/cover;
+  padding: 50px 20px;
+  position: relative;
+}
+
+.journal-overlay {
+  background: rgba(0, 0, 0, 0.85); /* 박스 배경 어둡게 */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.journal-section h1 {
+  font-family: "Cinzel", serif;
+  text-shadow: 0 0 7px;
+  font-size: 4vw;
+  color: #ffffff;
+  text-align: left;
+  border-bottom: 2px solid #6d8af5;
+  margin-bottom: 20px;
+}
+
+.journal-section p {
+  font-family: "Diphylleia", serif;
+  font-size: 1.3vw;
+  color: #b3e0f2;
+  margin-bottom: 20px;
+}
+
+.journal-write {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.journal-write-button {
+  background: #b3e0f2; /* 밝은 배경색 */
+  color: #000000; /* 버튼 텍스트 검은색 */
+  padding: 10px 20px;
+  border: none; /* 테두리 제거 */
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: not-allowed;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.journal-write-button:hover {
+  background-color: #6d8af5;
+  color: #ffffff;
+}
+
+/* 리스트 테이블 스타일 */
+.journal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 1rem;
+  background: rgba(20, 20, 20, 0.9); /* 리스트 테이블 배경 더 밝게 */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.journal-table th,
+.journal-table td {
+  font-family: "Diphylleia", serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  text-align: left;
+}
+
+.journal-table th {
+  background-color: rgba(109, 138, 245, 0.4); /* 컬러 강조 */
+  color: #b3e0f2;
+  font-weight: bold;
+}
+
+.journal-table td {
+  background: rgba(30, 30, 30, 0.9); /* 리스트 내부 조금 더 밝게 */
+  color: rgba(255, 255, 255, 0.9);
+  transition: background-color 0.3s ease;
+}
+
+.journal-table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.1); /* 밝게 강조 효과 */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center; /* 숫자를 센터에 정렬 */
+  align-items: center; /* 숫자와 아이콘 수직 정렬 */
+  margin-top: 30px; /* 리스트와 간격 추가 */
+  gap: 10px; /* 숫자 간격 조정 */
+}
+
+.pagination span {
+  color: #B3E0F2; /* 밝은 하늘색 */
+  padding: 8px 12px; /* 클릭 영역 확대 */
+  margin: 0 5px; /* 숫자 사이 간격 */
+  text-decoration: none;
+  border: 1px solid #6d8af5; /* 테두리 색상 */
+  border-radius: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination span:hover {
+  background-color: #6d8af5; /* 호버 시 배경색 */
+  color: #ffffff; /* 호버 시 글자색 */
+}
+
+.pagination span.active {
+  background-color: #6d8af5; /* 활성화된 숫자 배경 */
+  color: #ffffff; /* 활성화된 숫자 글자 */
+}
+
+
+/* 연락처 섹션 스타일 */
+#contact {
+  font-family: "Cinzel", serif;
+}
+.contact-section {
+  background: url('solar1.png') no-repeat center center/cover;
+  padding: 3rem 0;
+  color: #ffffff;
+}
+.contact-section h2 {
+  text-shadow: 0 0 5px;
+  font-size: 3vw;
+  margin-bottom: 50px;
+}
+
+.contact-card {
+  padding: 1.5rem;
+  border-bottom: 4px solid;
+  background-color: #FFFFFF;
+  color: #000000; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#footer {
+  font-family: "Cinzel", serif;
+}
+
